@@ -30,29 +30,37 @@ Description here.
 $ npm i egg-route-decrator --save
 ```
 
-## Usage
-
+## Usage & Configuration
+- Enable plugin in `config/plugin.js`
 ```js
-// {app_root}/config/plugin.js
 exports.routeDecrator = {
   enable: true,
   package: 'egg-route-decrator',
 };
 ```
-
-## Configuration
-
+- Edit your own configurations in `conif/config.{env}.js`
 ```js
-// {app_root}/config/config.default.js
 exports.routeDecrator = {
 };
 ```
 
-see [config/config.default.js](config/config.default.js) for more detail.
+- see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
 <!-- example here -->
+### HttpController
+@HttpController(path?: string) 用于装饰控制器，表示当前路由控制器的公共前缀
+### Get
+@Get(path?: string) 装饰get请求
+### Post
+@Post(path?: string) 装饰post请求
+### Put
+@Put(path?: string) 装饰put请求
+### Delete
+@Delete(path: string) 装饰Delete请求
+### 参数校验
+### Full Example
 
 ## Questions & Suggestions
 
