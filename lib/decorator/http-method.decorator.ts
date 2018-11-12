@@ -23,7 +23,7 @@ export const Put = createHttpMethodDecorator(HttpMethodEnum.PUT);
 export const Delete = createHttpMethodDecorator(HttpMethodEnum.DELETE);
 
 // 设置控制器
-export const Control = (prefix: string = '') => {
+export const HttpController = (prefix: string = '') => {
   return (target: any) => {
     Reflect.defineMetadata(ROUTE_CONTROLLER_METADATA, prefix, target);
   };

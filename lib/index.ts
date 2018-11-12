@@ -16,7 +16,7 @@ export interface RouteMetadataInterface {
   ctrlPrefix: string; // 控制器前缀
 }
 
-export class RequestMapping {
+export class RouteDecorator {
   app: Application;
   // 全局路由前缀
   _prefix: string = '';
@@ -116,7 +116,7 @@ export class RequestMapping {
     const routeKey = `[${httpMethod}]:${url}`;
     if (this._routes.has(routeKey)) {
       // 路由重复
-      app.emit('error', `[route]${routeKey} already exists.`);
+      console.error(`[route]${routeKey} already exists.`);
     }
     this._routes.set(routeKey, {
       filePath: file,

@@ -17,7 +17,7 @@ describe('test/route-decrator.test.js', () => {
   it('should GET /', () => {
     return app.httpRequest()
       .get('/')
-      .expect('hi, routeDecrator')
+      .expect('hi, routeDecorator')
       .expect(200);
   });
 });

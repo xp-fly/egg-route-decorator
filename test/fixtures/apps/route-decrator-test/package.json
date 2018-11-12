@@ -1,4 +1,7 @@
 {
-  "name": "route-decrator-test",
-  "version": "0.0.1"
+  "name": "route-decorator-test",
+  "version": "0.0.1",
+  "egg": {
+    "typescript": true
+  }
 }
