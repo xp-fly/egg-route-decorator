@@ -14,6 +14,7 @@
     "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
+    "@types/egg": "^1.5.0",
     "@types/node": "^10.11.0",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
@@ -24,11 +25,11 @@
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.16.0",
     "egg-ts-helper": "^1.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^5.1.0",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
-    "eslint": "^4.11.0",
-    "eslint-config-egg": "^5.1.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
