@@ -1,4 +1,4 @@
-# egg-route-decrator
+# egg-route-decorator
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -27,20 +27,20 @@ Description here.
 ## Install
 
 ```bash
-$ npm i egg-route-decrator --save
+$ npm i egg-route-decorator --save
 ```
 
 ## Usage & Configuration
 - Enable plugin in `config/plugin.js`
 ```js
-exports.routeDecrator = {
+exports.routeDecorator = {
   enable: true,
-  package: 'egg-route-decrator',
+  package: 'egg-route-decorator',
 };
 ```
 - Edit your own configurations in `conif/config.{env}.js`
 ```js
-exports.routeDecrator = {
+exports.routeDecorator = {
 };
 ```
 
