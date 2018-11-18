@@ -125,7 +125,7 @@ export class RouteDecorator {
       ctrlPrefix,
     });
     // 打印路由日志
-    app.getLogger('routeLogger').info(`[route]${routeKey} >>> ${file}#${methodName}`);
+    app.logger.info(`[route]${routeKey} >>> ${file}#${methodName}`);
   }
 
   /**

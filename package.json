@@ -24,17 +24,18 @@
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.16.0",
     "egg-ts-helper": "^1.14.0",
-    "eslint-config-egg": "^5.1.0",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^5.1.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "scripts": {
-    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test": "npm run tsc && npm run lint -- --fix && egg-bin pkgfiles && npm run test-local && npm run clean",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
@@ -45,8 +46,8 @@
     "clean": "ets clean"
   },
   "files": [
-    "app.js",
-    "agent.js",
+    "index.js",
+    "lib",
     "config"
   ],
   "ci": {

@@ -6,7 +6,7 @@ describe('test/route-decrator.test.js', () => {
   let app;
   before(() => {
     app = mock.app({
-      baseDir: 'apps/route-decrator-test',
+      baseDir: 'apps/route-decorator-test',
     });
     return app.ready();
   });
@@ -20,4 +20,26 @@ describe('test/route-decrator.test.js', () => {
       .expect('hi, routeDecorator')
       .expect(200);
   });
+
+  it('should POST /', () => {
+    return app.httpRequest()
+      .post('/')
+      .expect('post method')
+      .expect(200);
+  });
+
+  it('should PUT /', () => {
+    return app.httpRequest()
+      .put('/')
+      .expect('put method')
+      .expect(200);
+  });
+
+  it('should DELETE /', () => {
+    return app.httpRequest()
+      .delete('/')
+      .expect('delete method')
+      .expect(200);
+  });
+
 });
