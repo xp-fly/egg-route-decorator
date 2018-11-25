@@ -80,7 +80,13 @@ export class RouteDecorator {
       const controller = require(file).default;
       const exploreCtrl = exploreController(controller);
       const {handlers, ctrlPrefix} = exploreCtrl;
-      handlers.forEach((handler) => {
+      // 将:param的参数的路由放在最后面
+      const sortHandlers = handlers
+        .sort((prev, next) => {
+          const reg = new RegExp('[\\s\\S]*:[\\s\\S]*', 'g');
+          return (+reg.test(prev.urlPath)) - (+reg.test(next.urlPath));
+        });
+      sortHandlers.forEach((handler) => {
         const {
           methodName,
           httpMethod,
